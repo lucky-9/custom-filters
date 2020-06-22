@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filtersModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Filters</title>
+  </head>
+  <body ng-controller="mainCtrl">
+    <h1>{{title}}</h1>
+    <div>
+      <input type="text" ng-change="onChange()" ng-model="inputText" />
+      <br />
+      <p>The Length of The Input String: {{length}}</p>
+      <p>
+        The Reverse of the Input String: {{inputText | reverse}}
+      </p>
+      <p>
+        The Reverse Capital of the Input String: {{inputText | reverse |
+        uppercase}}
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
